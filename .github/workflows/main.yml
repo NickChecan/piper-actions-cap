@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Initialize Piper
+        uses: SAP/project-piper-action@master
+        with:
+          command: help
+      - name: Build Project
+        uses: SAP/project-piper-action@master
+        with:
+          command: mtaBuild
