@@ -10,6 +10,10 @@ jobs:
         uses: SAP/project-piper-action@master
         with:
           command: help
+      - name: Prepare docker
+        uses: SAP/project-piper-action@master
+        with:
+          command: dockerExecute
       - name: Build Project
         uses: SAP/project-piper-action@master
         with:
